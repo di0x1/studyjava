@@ -12,14 +12,15 @@ int i;
             final double div = 9.0 / 5.0;
             final int soma = 32;
 
-            pika(temp);
+            far = (cel * div) + soma;
+            pika();
 
             System.out.printf("Temperatura em far %.2f \n", far);
         }
     }
-    public static void pika(int[] i ){
+    public static void pika(){
 
-        far = (cel * div) + soma;
+        System.out.printf("0 \n");
 
     }
 }
