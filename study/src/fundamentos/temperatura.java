@@ -20,7 +20,7 @@ int i;
     }
     public static void pika(){
 
-        System.out.printf("teste pc\n");
+        System.out.printf("omg\n");
 
     }
 }
