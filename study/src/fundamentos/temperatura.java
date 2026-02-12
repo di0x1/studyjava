@@ -1,7 +1,7 @@
 package fundamentos;
 
 import java.util.Date;
-
+//ESTUDADO!
 public class temperatura {
 
     public static void main(String[] args) {
