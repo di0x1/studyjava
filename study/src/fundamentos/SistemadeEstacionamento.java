@@ -32,10 +32,9 @@ public class SistemadeEstacionamento {
         }
     }
     public static void Estacionamento (){
-
+        Scanner teclado = new Scanner(System.in);
         if(VagasOcupadas()<10){
             System.out.println("Digite a placa do carro: ");
-            Scanner teclado = new Scanner(System.in);
             String placa = teclado.next();
             Vagas(placa);
 
@@ -48,22 +47,19 @@ public class SistemadeEstacionamento {
     }
 
     public static void Vagas(String placa) {
-
-        for (int i = 0; i < 9; i++) {
-
+        int x = 0;
+        for (int i = 0; i < 10 && x == 0; i++) {
             if (vagas[i] == null) {
                 vagas[i] = placa;
-            } else {
-                System.out.println("Estacionamento lotado");
+                x = 1;
             }
-
         }
     }
 
     public static int VagasOcupadas() {
 
             int ctd = 0;
-            for (int i = 0; i < 9; i++) {
+            for (int i = 1; i < 10; i++) {
                 if (vagas[i] != null) {
                     ctd++;
                 }
