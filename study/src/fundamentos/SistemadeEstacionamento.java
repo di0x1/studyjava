@@ -21,13 +21,15 @@ public class SistemadeEstacionamento {
                     break;
 
                 case 2:
-
+                    RetiraEstacionamento();
                     break;
 
                 case 3:
-
+                    MostrarVagas();
                     break;
 
+                case 4:
+                    break;
             }
         }
     }
@@ -37,12 +39,7 @@ public class SistemadeEstacionamento {
             System.out.println("Digite a placa do carro: ");
             String placa = teclado.next();
             Vagas(placa);
-
-
         }
-
-
-
     }
 
     public static void Vagas(String placa) {
@@ -64,5 +61,33 @@ public class SistemadeEstacionamento {
                 }
             }
             return ctd;
+    }
+
+    public static void RetiraEstacionamento (){
+        int x = 0;
+        Scanner teclado = new Scanner(System.in);
+            System.out.println("Digite a placa do carro que deseja retirar: ");
+            String retira = teclado.next();
+            RetirarCarro(retira);
+
+    }
+
+    public static void RetirarCarro(String retira) {
+        Scanner teclado = new Scanner(System.in);
+        for (int i = 0; i < vagas.length; i++) {
+            if (vagas[i] != null && vagas[i].equals(retira)) {
+                vagas[i] = null;
+                System.out.println("Carro retirado com sucesso!");
+                return;
+            }
+            System.out.println("Carro Nao Encontrado!");
+            break;
         }
+    }
+
+    public static void MostrarVagas() {
+        for (int i = 0; i < 10; i++) {
+           System.out.println("Vagas que estao sendo ocupadas:"+vagas[i]+"  Pocisao da vaga:"+(i + 1));
+        }
+    }
 }
