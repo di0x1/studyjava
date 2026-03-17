@@ -69,7 +69,6 @@ public class SistemadeEstacionamento {
             System.out.println("Digite a placa do carro que deseja retirar: ");
             String retira = teclado.next();
             RetirarCarro(retira);
-
     }
 
     public static void RetirarCarro(String retira) {
