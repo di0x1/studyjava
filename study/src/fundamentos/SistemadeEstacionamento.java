@@ -39,9 +39,8 @@ public class SistemadeEstacionamento {
             Vagas(placa);
 
 
-        } else {
-            System.out.println("Estacionamento lotado");
         }
+
 
 
     }
