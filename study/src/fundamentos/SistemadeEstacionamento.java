@@ -7,7 +7,8 @@ public class SistemadeEstacionamento {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         int opcao = 0;
-        while(opcao!=4) {
+
+        do {
 
         System.out.println("1 - Estacionar carro");
         System.out.println("2 - Retirar carro");
@@ -31,7 +32,7 @@ public class SistemadeEstacionamento {
                 case 4:
                     break;
             }
-        }
+        }while(opcao!=4);
     }
     public static void Estacionamento (){
         Scanner teclado = new Scanner(System.in);
@@ -39,6 +40,9 @@ public class SistemadeEstacionamento {
             System.out.println("Digite a placa do carro: ");
             String placa = teclado.next();
             Vagas(placa);
+        }else{
+
+            System.out.println("Estacionamento cheio");
         }
     }
 
@@ -78,9 +82,10 @@ public class SistemadeEstacionamento {
                 vagas[i] = null;
                 System.out.println("Carro retirado com sucesso!");
                 return;
+            }else {
+                System.out.println("Carro Nao Encontrado!");
+                return;
             }
-            System.out.println("Carro Nao Encontrado!");
-            break;
         }
     }
 
