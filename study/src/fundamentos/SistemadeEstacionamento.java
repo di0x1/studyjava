@@ -31,8 +31,13 @@ public class SistemadeEstacionamento {
 
                 case 4:
                     break;
+
+                default:
+                    System.out.println("Opcao invalida por favor digite outra opcao");
+                    return;
             }
-        }while(opcao!=4);
+
+        }while(opcao != 4);
     }
     public static void Estacionamento (){
         Scanner teclado = new Scanner(System.in);
@@ -43,6 +48,7 @@ public class SistemadeEstacionamento {
         }else{
 
             System.out.println("Estacionamento cheio");
+            return;
         }
     }
 
